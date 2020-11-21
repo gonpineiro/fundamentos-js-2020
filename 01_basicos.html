@@ -50,33 +50,45 @@
             console.log('Valor colores', colores);
 
             objeto.correo = 'asd@asd.com';
+
+            /* Ingresa un valor a lo ultimo del array */
             colores.push('Morado');
             console.log('Valor objeto', objeto);
             console.log('Valor colores', colores);
 
             console.log('------Cadenas de texto------');
             let nombre = 'Gonzalo';
-            console.log('Valor de nombre:', nombre);
-            console.log('Valor de NOMBRE:', nombre.toUpperCase());
+            console.log('nombre:', nombre);
+
+            /* Transforma todo el string a Mayúsculas */
+            console.log('nombre.toUpperCase():', nombre.toUpperCase());
+
             let saludo = new String('Hola mundo');
             console.log('Valor de saludo:', saludo);
             let lorem =
                 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas quisquam quo perferendis tempore cumque molestiae excepturi laborum eum cum vitae odio at nostrum placeat, itaque pariatur perspiciatis omnis voluptate commodi.';
-            console.log('indcludes', lorem.includes('Lorem'));
+
+            /* Devuelve un true o false si incluye un string */
+            console.log('lorem.includes("Lorem")', lorem.includes('Lorem'));
             lorem =
                 '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas quisquam quo perferendis tempore cumque molestiae excepturi laborum eum cum vitae odio at nostrum placeat, itaque pariatur perspiciatis omnis voluptate commodi.   ';
+
             console.log('lorem:', lorem);
+
+            /* Retira los espacios en blanco de los extremos */
             console.log('trim:', lorem.trim());
+
+            /* Crea un array utilizando cierto delimitador */
             console.log('split:  ', lorem.split(','));
 
             console.log('------Numeros------');
             let numeroA = 2;
             let numeroB = new Number(2);
-            let numeroC = 7.19;
+            let numeroC = '7.19';
             let numeroD = '5.6';
-            console.log('valor numeroA:', numeroA);
-            console.log('valor numeroB:', numeroB);
-            console.log('parseInt numeroC: ', numeroC.parseInt);
+            console.log('numeroA:', numeroA);
+            console.log('numeroB:', numeroB);
+            console.log('numeroC.parseInt: ', numeroC.parseInt);
             console.log('typeof numeroD: ', typeof numeroD);
             console.log('numeroA + numeroB: ', numeroA + numeroB);
             console.log('numeroC + numeroD: ', numeroC + numeroD);
@@ -90,6 +102,8 @@
             let f = Boolean(false);
             console.log('Verdadero, falso:', verdadero, falso);
             console.log('typeof Verdadero, falso:', typeof verdadero, typeof falso);
+
+            /* Determina el tipo de Boolean */
             console.log('Boolean(0):', Boolean(0));
             console.log('Boolean(-8):', Boolean(-8));
             console.log("Boolean(''):", Boolean(''));
@@ -190,8 +204,14 @@
             console.log('objC', objC);
             objC.saludar();
             objC.decirMiNombre();
+
+            /* Devuelve un array con las keys del objeto */
             console.log('Object.keys(objC)', Object.keys(objC));
+
+            /* Devuelve un array con los values del objeto */
             console.log('Object.values(objC)', Object.values(objC));
+
+            /* Devuelve un true o false si el existe el key */
             console.log("objC.hasOwnProperty('nombre')", objC.hasOwnProperty('nombre'));
             console.log("objC.hasOwnProperty('nacimiento')", objC.hasOwnProperty('nacimiento'));
 
@@ -383,7 +403,7 @@
                 edad: 25,
             };
             let { nombre: nombrePersona, apelldo: apellidoPersona, edad: edadPersona } = persona;
-            console.log('nombrePersona, apellidoPersona, edadPersona', nombrePersona, apellidoPersona, edadPersona);
+            console.log('nombrePersona, apellidoPersona, edadPersona:', nombrePersona, apellidoPersona, edadPersona);
 
             console.log('------Objetos Literales------');
             let nombreObjLite = 'Ken';
@@ -454,7 +474,7 @@
             perroUno();
 
             const perroDos = {
-                nombre: 'FIrulais',
+                nombre: 'Firulais',
                 ladrar: function () {
                     console.log('perroDos', this);
                 },
@@ -462,13 +482,13 @@
             perroDos.ladrar();
 
             const perroTres = {
-                nombre: 'FIrulais',
+                nombre: 'Firulais',
                 ladrar: () => console.log('perroTres', this),
             };
             perroTres.ladrar();
 
             const perroCuatro = {
-                nombre: 'FIrulais',
+                nombre: 'Firulais',
                 ladrar() {
                     console.log('perroCuatro', this);
                 },
@@ -533,7 +553,8 @@
             /* Perro hereda de Animal */
             Perro.prototype = new Animal();
             Perro.prototype.constructor = Perro;
-            /* Sobre escrituyra del prototipo padre Animal */
+
+            /* Sobre escritura del prototipo padre Animal */
             Perro.prototype.sonar = function () {
                 console.log('Soy un perro y mi sonido es un ladrido');
             };
@@ -560,9 +581,12 @@
                         console.log(this.nombre);
                     }
                 }
+
                 const mimi = new Animal('Mimi', 'Hembra');
+
                 mimi.sonar();
                 mimi.saludar();
+
                 class Perro extends Animal {
                     constructor(nombre, genero, tamanio) {
                         super(nombre, genero);
@@ -609,6 +633,7 @@
                         console.log('GuauGuaru');
                     }
 
+                    /* Este metodo se puede ejecutar sin inicializar la clase */
                     static queEres() {
                         console.log('Los perros somo anumales mamiferos que pertenecemos a la familia de los caninos');
                     }
@@ -620,9 +645,13 @@
                     set setRaza(raza) {
                         this.raza = raza;
                     }
-                } //Esto genera un error ya que no es metodo estatico
+                }
 
-                /* Perro.ladrar() */ Perro.queEres();
+                //Esto genera un error ya que no es metodo estatico
+                /* Perro.ladrar() */
+
+                /* Metodo estatico */
+                Perro.queEres();
 
                 const preta = new Perro('Preta', 'Hembra');
                 console.log('preta', preta);
@@ -651,6 +680,7 @@
             console.dir(window);
             console.dir(document);
 
+            /* Crea un grupo de console.log, debe terminar en console.groupEnd(); */
             console.group('Curso');
             console.log('Primero');
             console.log('Segundo');
@@ -658,7 +688,11 @@
             console.groupEnd();
 
             console.log(console);
-            console.log(Object.entries(console));
+            
+            /* Devuelve una matriz de pares de un objeto */
+            console.log('Object.entries(console)',Object.entries(console));
+
+            /* Devuelve una matriz de pares de un objeto de manera ordenada */
             console.table(Object.entries(console).sort());
             {
                 const numero = [1, 2, 3, 4, 5];
@@ -806,21 +840,21 @@
                 console.log(d);
                 console.log(w);
                 console.log(c);
-                c.log('Esto es console.log()')
+                c.log('Esto es console.log()');
             })(document, window, console);
             /* Otras maneras de declarar las IIFE */
             (function () {
                 console.log('Version Clasica');
             })();
-            ((function () {
+            (function () {
                 console.log('Version Crockford');
-            })());
-            +function () {
+            })();
+            +(function () {
                 console.log('Version Unaria');
-            }();
-            !function () {
+            })();
+            !(function () {
                 console.log('Version Facebook');
-            }();
+            })();
         </script>
     </body>
 </html>
