@@ -1,0 +1,1 @@
+console.log('Navegador no soporta Modulos +ES6');
