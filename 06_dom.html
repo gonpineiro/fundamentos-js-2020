@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM</title>
+        <style>
+            :root {
+                --yellow-color: #f7df1e;
+                --dark-color: #222;
+            }
+
+            .cards {
+                border: thin solid var(--yellow-color);
+                padding: 1rem;
+            }
+
+            .card {
+                display: inline-block;
+                background-color: var(--dark-color);
+                color: var(--yellow-color);
+            }
+
+            .card-figure {
+                padding: 1rem;
+            }
+
+            .rotate-45 {
+                transform: rotate(45deg);
+            }
+
+            .rotate-135 {
+                transform: rotate(135deg);
+            }
+
+            .opacity-80 {
+                opacity: 0.8;
+            }
+
+            .sepia {
+                filter: sepia(1);
+            }
+
+            .eventos-flujo div {
+                padding: 4rem;
+                font-size: 2rem;
+                text-align: center;
+                color: black;
+            }
+            .uno {
+                background-color: yellow;
+            }
+
+            .dos {
+                background-color: gold;
+            }
+
+            .tres {
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>WEB APIs</h1>
+        <h2>DOM: Document Object Model</h2>
+        <h2>BOM: Browser Object Model</h2>
+        <h2>CSSOM: CSS Object Model</h2>
+        <ul>
+            <li>Eventos</li>
+            <li>Forms</li>
+            <li>AJAX - Fetch</li>
+            <li>History</li>
+            <li>Web Storage</li>
+            <li>Geolocation</li>
+            <li>Drag & Drop</li>
+            <li>Indexes DB</li>
+            <li>Canvas</li>
+            <li>MathMedia</li>
+            <li>etc...</li>
+        </ul>
+        <hr />
+        <h3>Manejo del DOM</h3>
+        <p id="que-es">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime saepe, cupiditate perspiciatis culpa officia est quibusdam
+            tempore, explicabo soluta eos vel rem laboriosam aliquid debitis voluptatibus fugit dolores. Fugit, repellat.
+        </p>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Seccion 1</a></li>
+                <li><a href="#">Seccion 2</a></li>
+                <li><a href="#">Seccion 3</a></li>
+                <li><a href="#">Seccion 4</a></li>
+                <li><a href="#">Seccion 5</a></li>
+            </ul>
+        </nav>
+        <input type="text" name="nombre" id="" placeholder="Nombre" />
+        <a href="dom.html" class="link-dom" data-description="DocumentObjectModel" data-id="1" style="background: #f7df1e; color: #222"
+            >DOM</a
+        >
+        <section class="cards">
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/animals" alt="animals" />
+                <figcaption>animals</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/tech" alt="tech" />
+                <figcaption>tech</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/people" alt="people" />
+                <figcaption>people</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/arch" alt="arch" />
+                <figcaption>arch</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/nature" alt="nature" />
+                <figcaption>nature</figcaption>
+            </figure>
+        </section>
+        <template id="template-card">
+            <figure class="card">
+                <img />
+                <figcaption></figcaption>
+            </figure>
+        </template>
+        <hr />
+        <h3>Eventos en JS</h3>
+        <button onclick="holaMundo();">Evento con atributo HTML</button>
+        <br />
+        <br />
+        <button id="evento-semantico">Evento con manejador Semántico</button>
+        <br />
+        <br />
+        <button id="evento-multiple">Evento con manejador multiple</button>
+        <br />
+        <br />
+        <button id="evento-remover">Removiendo evento con manejadores multiples</button>
+        <hr />
+        <h3>Flujo de eventos</h3>
+        <section class="eventos-flujo">
+            <div class="uno">
+                1
+                <div class="dos">
+                    2
+                    <div class="tres">
+                        3
+                        <a href="https://www.google.com.ar" target="_blank" rel="noopener">Google</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr />        
+        <h3 style="width: 2000px;">Manejo del BOM</h3>
+        <button id="abrir-ventana">Abrir Ventana</button>
+        <br>
+        <br>
+        <button id="cerrar-ventana">Cerrar Ventana</button>
+        <br>
+        <br>
+        <button id="imprimir-ventana">Imprimir Ventana</button>
+        <hr>
+        <script src="06_dom.js"></script>
+    </body>
+</html>

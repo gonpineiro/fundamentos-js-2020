@@ -1,0 +1,12 @@
+{
+    "cadena": "Jon",
+    "numero": 35,
+    "booleano": true,
+    "arreglo": ["Correr", "Programar", "cocinar"],
+    "objeto": {
+        "twitter": "@asd",
+        "email": "asd@asd.com"
+    },
+    "null": null
+}
+
