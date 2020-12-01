@@ -12,26 +12,31 @@
             /* 1) UNa funcion que cuenta el niumero de caracteres de una cadena de texto: miFuncion("Hola mundo") -> 10 */
             const countChar = (str = '') => (!str ? console.warn('No hay cadena') : console.info(str.length));
             countChar();
-            countChar('asd');
+            countChar('Gonzalo');
+
             console.log('------(2)------');
             /* 2) Una funcion que te devuelva el texto recortado segun el numero de caracteres indicados: miFuncion("Hola Mundo", 4)
                 -> "Hola" */
             const sliceStr = (str = '', n = undefined) => (!str ? console.warn('No hay cadena') : console.info(str.slice(0, n)));
             sliceStr('', 2);
-            sliceStr('HOla Mundoasdasd', 2);
+            sliceStr('Hola mundo', 2);
+
             console.log('------(3)------');
             /* 3) una funcion que devuelva un Array de textos separados por cierto caracter: miFuncion(hola que tal, ' ')
                 ->["hola", "que", "tal"] */
             const strToArray = (str = '', s = undefined) => (!str ? console.warn('No hay cadena') : console.info(str.split(s)));
             strToArray('Hola esto es una palabra compleja', ' ');
+
             console.log('------(4)------');
             /* 4) Una funcion que repita un texto X veces: miFuncion('str', 4)->str str str str */
             const repeatStr = (str = '', r = 1) => (!str ? console.warn('No hay cadena') : console.info(str.repeat(r)));
             repeatStr('repito', 3);
+
             console.log('------(5)------');
             /* 5) Una funcion que invierta las palabras de una cadena de text: miFuncion("Hola Mundo") -> "odnuM aloH" */
             const invertStr = (str = '') => (!str ? console.warn('No hay cadena') : console.info(str.split('').reverse().join('')));
             invertStr('hola es una cadena');
+
             console.log('------(6)------');
             /* 6) Una funcion que cuente el numero de veces que se repite cierta palabra: miFuncion("hola mundo adios mundo", "mundo")
                 -> 2 */
@@ -50,6 +55,7 @@
                 console.log('la parabra se repite ' + count);
             };
             countStrInStr('hola mundo adios mundo mundo mundo', 'mundo');
+
             console.log('------(7)------');
             /* 7) Una funcion que valide si una palabra o frase es una palindromo */
             const palindrome = (str = '') => {
@@ -64,6 +70,7 @@
             palindrome('meNem');
             palindrome('');
             palindrome('Hola');
+
             console.log('------(8)------');
             /* 8) Una funcion que elimine cierto patro de caracteres de un texto dado: miFuncion("xyz1, xyz2, xyz3, xyz4, xyz5, xyz")
                 -> 1,2,3,4,5*/
@@ -78,6 +85,7 @@
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam consequuntur architecto quibusdam laborum expedita, eaque doloremque aliquid ab illo a soluta maiores nisi repellendus tenetur molestiae voluptas voluptates impedit.',
                 '[a-z]'
             );
+
             console.log('------(9)------');
             /* 9) Una funcion que obtenga un numero aleatorio entre 501 y 600 */
             const randon501To600 = () => console.info(Math.round(Math.random() * 100) + 500);
@@ -471,6 +479,7 @@
                         'Western',
                     ];
                 }
+
                 static aceptedGender() {
                     return console.info(`Los generos aceptados son: ${Movie.listGender.join(', ')}`);
                 }
@@ -550,6 +559,7 @@
                         }
                     }
                 }
+
                 datasheet() {
                     console.info(
                         `Ficha Técnica:\nTítulo: ${this.title}\nDirector: ${this.director}\nAño: ${
@@ -609,7 +619,7 @@
                     qualification: 1.3545,
                 },
             ];
-            myMovies.forEach(el => new Movie(el).datasheet())
+            myMovies.forEach((el) => new Movie(el).datasheet());
         </script>
     </body>
 </html>
