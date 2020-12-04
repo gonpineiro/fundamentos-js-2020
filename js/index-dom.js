@@ -9,5 +9,8 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Evento del Reloj */
     digitalClock('#reloj', '#activar-reloj', '#desactivar-reloj');
+
+    /* Evento Alarma */
+    alarm('assets/alarm.mp3', '#activar-alarma', '#desactivar-alarma');
 });
 
