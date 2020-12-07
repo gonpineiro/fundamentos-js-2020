@@ -2,6 +2,7 @@ import hamburgerMenu from './dom/menu-hamburguesa.js';
 import { alarm, digitalClock } from './dom/reloj.js';
 import { shortcuts, moveBall } from './dom/teclado.js';
 import countDown from './dom/cuentaRegresiva.js';
+import botonScroll from './dom/botonScroll.js';
 
 const d = document;
 
@@ -17,6 +18,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Cuenta regresiva */
     countDown('countdown', "Jun 03, 2021 03:23:19", "Feliz cumpleaños");
+
+    /* Scroll Top Button */
+    botonScroll('.scroll-top-btn');
 });
 
 /* keyup, keydown, keypress */
