@@ -3,6 +3,7 @@ import { alarm, digitalClock } from './dom/reloj.js';
 import { shortcuts, moveBall } from './dom/teclado.js';
 import countDown from './dom/cuentaRegresiva.js';
 import botonScroll from './dom/botonScroll.js';
+import darkTheme from './dom/darkTheme.js';
 
 const d = document;
 
@@ -21,6 +22,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Scroll Top Button */
     botonScroll('.scroll-top-btn');
+
+    /* DarkTheme */
+    darkTheme('.dark-theme-btn', 'dark-mode');
 });
 
 /* keyup, keydown, keypress */
