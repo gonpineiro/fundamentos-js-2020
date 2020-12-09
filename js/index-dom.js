@@ -5,6 +5,7 @@ import countDown from './dom/cuentaRegresiva.js';
 import botonScroll from './dom/botonScroll.js';
 import darkTheme from './dom/darkTheme.js';
 import responsiveMedia from './dom/responsiveObject.js';
+import resposiveTester from './dom/responsiveTester.js';
 
 const d = document;
 
@@ -33,6 +34,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     responsiveMedia('youtube', '(min-width: 1024px)', linkVideo, videoYoutube);
     responsiveMedia('gmaps', '(min-width: 1024px)', linkMap, map);
+
+    /* Responsive Tester */
+    resposiveTester('responsive-tester');
 });
 
 /* DarkTheme */
