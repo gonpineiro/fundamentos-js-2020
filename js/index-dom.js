@@ -6,6 +6,7 @@ import botonScroll from './dom/botonScroll.js';
 import darkTheme from './dom/darkTheme.js';
 import responsiveMedia from './dom/responsiveObject.js';
 import resposiveTester from './dom/responsiveTester.js';
+import userDeviceInfo from './dom/deviceDetect.js';
 
 const d = document;
 
@@ -37,6 +38,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Responsive Tester */
     resposiveTester('responsive-tester');
+
+    /* DeviceDetect */
+    userDeviceInfo('user-device');
 });
 
 /* DarkTheme */
