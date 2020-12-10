@@ -8,6 +8,7 @@ import responsiveMedia from './dom/responsiveObject.js';
 import resposiveTester from './dom/responsiveTester.js';
 import userDeviceInfo from './dom/deviceDetect.js';
 import networkStatus from './dom/networkStatus.js';
+import webcam from './dom/webcamDetection.js';
 
 const d = document;
 
@@ -42,6 +43,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* DeviceDetect */
     userDeviceInfo('user-device');
+
+    /* WebCam detection */
+    webcam('webcam');
 });
 
 /* DarkTheme */
@@ -54,4 +58,4 @@ d.addEventListener('keydown', (e) => {
 });
 
 /* Network Status */
-networkStatus()
+networkStatus();
