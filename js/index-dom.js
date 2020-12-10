@@ -7,6 +7,7 @@ import darkTheme from './dom/darkTheme.js';
 import responsiveMedia from './dom/responsiveObject.js';
 import resposiveTester from './dom/responsiveTester.js';
 import userDeviceInfo from './dom/deviceDetect.js';
+import networkStatus from './dom/networkStatus.js';
 
 const d = document;
 
@@ -51,3 +52,6 @@ d.addEventListener('keydown', (e) => {
     shortcuts(e);
     moveBall(e, '.ball', '.stage');
 });
+
+/* Network Status */
+networkStatus()
