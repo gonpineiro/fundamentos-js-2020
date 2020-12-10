@@ -9,6 +9,7 @@ import resposiveTester from './dom/responsiveTester.js';
 import userDeviceInfo from './dom/deviceDetect.js';
 import networkStatus from './dom/networkStatus.js';
 import webcam from './dom/webcamDetection.js';
+import getGeolocation from './dom/geolocation.js';
 
 const d = document;
 
@@ -46,6 +47,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* WebCam detection */
     webcam('webcam');
+
+    /* Geolocation */
+    getGeolocation('geolocation')
 });
 
 /* DarkTheme */
