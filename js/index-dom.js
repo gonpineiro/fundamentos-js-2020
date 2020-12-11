@@ -12,6 +12,7 @@ import webcam from './dom/webcamDetection.js';
 import getGeolocation from './dom/geolocation.js';
 import searchFilter from './dom/searchFilter.js';
 import digitalDraw from './dom/digitalDraw.js';
+import carousel from './dom/Carousel.js';
 
 const d = document;
 
@@ -58,6 +59,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Sorteo Digital */
     digitalDraw('#winner-btn', '.player');
+
+    /* Slider */
+    carousel();
 });
 
 /* DarkTheme */
