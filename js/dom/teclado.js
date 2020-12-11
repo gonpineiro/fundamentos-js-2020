@@ -1,13 +1,13 @@
 const d = document;
 
 export function shortcuts(e) {
-    console.log('type:', e.type);
+    /* console.log('type:', e.type);
     console.log('key:', e.key);
     console.log('keyCode:', e.keyCode);
     console.log('altKey:', e.altKey);
     console.log('ctrlKey:', e.ctrlKey);
     console.log('shiftKey:', e.shiftKey);
-    console.log(e);
+    console.log(e); */
 
     /* Genera un evento cuando presionamos ctrt + a */
     if (e.key === 'a' && e.altKey) {

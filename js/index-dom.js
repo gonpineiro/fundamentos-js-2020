@@ -10,6 +10,7 @@ import userDeviceInfo from './dom/deviceDetect.js';
 import networkStatus from './dom/networkStatus.js';
 import webcam from './dom/webcamDetection.js';
 import getGeolocation from './dom/geolocation.js';
+import searchFilter from './dom/searchFilter.js';
 
 const d = document;
 
@@ -49,7 +50,10 @@ d.addEventListener('DOMContentLoaded', (e) => {
     webcam('webcam');
 
     /* Geolocation */
-    getGeolocation('geolocation')
+    getGeolocation('geolocation');
+
+    /* Searchs Filters */
+    searchFilter('.card-filter', '.card');
 });
 
 /* DarkTheme */
