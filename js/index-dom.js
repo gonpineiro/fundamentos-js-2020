@@ -11,6 +11,7 @@ import networkStatus from './dom/networkStatus.js';
 import webcam from './dom/webcamDetection.js';
 import getGeolocation from './dom/geolocation.js';
 import searchFilter from './dom/searchFilter.js';
+import digitalDraw from './dom/digitalDraw.js';
 
 const d = document;
 
@@ -54,6 +55,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Searchs Filters */
     searchFilter('.card-filter', '.card');
+
+    /* Sorteo Digital */
+    digitalDraw('#winner-btn', '.player');
 });
 
 /* DarkTheme */
