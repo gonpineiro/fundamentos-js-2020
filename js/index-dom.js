@@ -13,6 +13,7 @@ import getGeolocation from './dom/geolocation.js';
 import searchFilter from './dom/searchFilter.js';
 import digitalDraw from './dom/digitalDraw.js';
 import carousel from './dom/Carousel.js';
+import scrollSpy from './dom/scrollSpy.js';
 
 const d = document;
 
@@ -62,6 +63,9 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     /* Slider */
     carousel();
+
+    /* scroll Spy - Interseccion Observer */
+    scrollSpy()
 });
 
 /* DarkTheme */

@@ -8,7 +8,7 @@ export default function scrollTopButton(btn) {
     w.addEventListener('scroll', (e) => {
         /* Operador Cortocircuito para detectar uno u otro */
         let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
-        console.log(w.pageYOffset, d.documentElement.scrollTop);
+        /* console.log(w.pageYOffset, d.documentElement.scrollTop); */
 
         if (scrollTop > 300) {
             /* Mostramos el boton */
